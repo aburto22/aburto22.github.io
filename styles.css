@@ -1,0 +1,499 @@
+/* General */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    background-color: #AAF9D0;
+    height: 100%;
+    width: 100%;
+}
+
+p {
+    font-size: 13px;
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.5;
+}
+
+a {
+    font-size: 13px;
+}
+
+/* Header */
+
+header {
+    padding: 40px 0 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 30px; 
+    margin-bottom: 20px;
+}
+
+header h2 {
+    font-size: 15px; 
+    margin-top: 0; 
+    font-style: italic; 
+    letter-spacing: 0.2em;
+}
+
+/* Navigation Menu */
+
+nav {
+    background-color: #c0c0c0;
+    min-height: 50px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: stretch;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.navSubMenu {
+    flex-basis: 120px;
+    cursor: pointer;
+    position: relative;
+}
+
+.navSubMenuMain {
+    flex-basis: 120px;
+    cursor: pointer;
+    position: relative;
+}
+
+#openMenu {
+    width: 20%;
+    background-color: black;
+    height: 100%;
+    position: relative;
+    left: 0;
+    color: white;
+    text-align: center;
+    display: none;
+    user-select: none;
+}
+
+#openMenu span {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.navIndex {
+    display: block;
+    position: relative;
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    z-index: 1;
+}
+
+.bikeImg {
+    position: relative;
+    top: 50%;
+    transform:translateY(-50%);
+}
+
+.blackBikeImg {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+}
+
+.navIndex:hover {
+    background-color: black;
+}
+
+.navIndex:hover .blackBikeImg {
+    visibility: visible;
+}
+
+.navSubMenuTitle {
+    position: relative;
+    display: block;
+    font-size: 13px;
+    height: 100%;
+    z-index: 1;
+    color: black;
+    background-color: #c0c0c0;
+    text-decoration: none;
+    transition: color 0.1s ease, background-color 0.2s;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.navSubMenuTitle span {
+    margin: 0;
+    display: block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    line-height: 1.2;
+}
+
+.navSubMenuContent {
+    position: absolute;
+    background-color: #A9A9A9;
+    min-width: 100%;
+    box-shadow: 0px 10px 15px rgba(0,0,0,0.2);
+    left: 0;
+    overflow: hidden;
+    bottom: 0;
+    max-height: 0;
+    transition: transform 0.2s, max-height 0.2s;
+    white-space: nowrap;
+}
+
+.navSubMenuContent a {
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.navSubMenu:hover .navSubMenuTitle {
+    background-color: #A9A9A9;
+    color: white;
+    box-shadow: 0 0 0 2px rgba(256, 256, 256, 0.2) inset;
+}
+
+.navSubMenu:hover .navSubMenuContent {
+    max-height: 200px;
+    transform: translateY(100%);
+}
+
+.navSubMenuContent a:hover {
+    background-color: #808080;
+    color: white;
+}
+
+/* Section General */
+
+section {
+    padding: 50px 5% 50px 5%;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 800px;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+/* Images & Polaroids */
+
+.imgCenter {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    border: 16px white solid;    
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.2);
+}
+
+.floatImg3 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 0 -1.5% 0 -1.5%;
+}
+
+.floatImgCont3 {
+    flex-shrink: 1;
+    width: 33.3%;
+    padding: 0 1.5% 0 1.5%;
+    margin-top: 40px;
+}
+
+.floatImg3 img {
+    position: relative;
+    width: 100%;
+    border: white 8px solid;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.2);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.polaroid {
+    border: white 8px solid;
+    background-color: white;
+    box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.2);
+    border-radius: 2px;
+    width: 200px;
+    float: right;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+.polaroid img {
+    width: 100%;
+    margin: 0;
+}
+
+.polaroidText {
+    font-size: 10px;
+    color: #808080;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+/* Gallery */
+
+.gallerySection {
+    max-width: 1000px;
+}
+
+.galleryContainer {
+    background-color: white;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 4px;
+    align-items: baseline; 
+}
+
+.galleryColumn {
+    width: 25%;
+}
+
+.galleryContainer img {
+    display: block;
+    border: 4px solid white;
+    width: 100%;
+    cursor: pointer;
+}
+
+.galleryContainer img:hover {
+    opacity: 0.7;
+}
+
+.fullScreenSection {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+}
+
+#fullScreenContainer {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.9);
+    position: fixed;
+    display: none;
+    z-index: 9;
+    top: 0;
+    left: 0;
+}
+
+#fullScreenImg {
+    width: auto;
+    height: auto;
+    max-height: 80%;
+    max-width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    border: 16px white solid;
+}
+
+#fullScreenLeft {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    font-size: 50px;
+    color: rgba(256,256,256,0.1);
+}
+
+#fullScreenLeft span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#fullScreenRight {
+    position: absolute;
+    height: 100%;
+    width: 10%;
+    cursor: pointer;
+    right: 0;
+    font-size: 50px;
+    color: rgba(256,256,256,0.1);
+}
+
+#fullScreenRight span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+
+#fullScreenExit {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: rgba(0,0,0,0.1);
+    color: rgba(256,256,256,0.3);
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    right: 11%;
+    cursor: pointer;
+}
+
+#fullScreenRight:hover, #fullScreenLeft:hover, #fullScreenExit:hover {
+    background-color: rgba(0,0,0,0.5);
+    color: rgba(256,256,256,0.5);
+}
+
+#fullScreenExit span {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%,-50%);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 0 5% 50px 5%;
+    font-size: 10px;
+    color: #808080;
+}
+
+footer hr {
+    border: rgba(128,128,128,0.5) solid 0.1px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+footer a {
+    color: #808080;
+    font-size: 10px;
+}
+
+footer table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+footer td {
+    width: 33%;
+}
+
+/* Media Screen */
+
+@media only screen and (max-width: 800px) {
+    .floatImgCont3 {
+        width: 50%;
+    }
+
+    .galleryColumn {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .floatImgCont3 {
+        width: 100%;
+        margin-top: 40px;
+    }
+
+    .floatImg3 img {
+        border: 16px white solid;
+    }
+
+    .galleryContainer {
+        padding: 8px;
+    }
+
+    .galleryColumn {
+        width: 100%;
+    }
+
+    .galleryContainer img {
+        border: 8px solid white;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    .navSubMenuMain {
+        flex-basis: 30px;
+    }
+
+    #openMenu {
+        display: block;
+        float: left;
+        width: 40%;
+    }
+    
+    .navIndex {
+        display: block;
+        float: right;
+        width: 60%;
+    }
+
+    .navSubMenu {
+        flex-basis: 30px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: overflow;
+        transition-delay: 2s;
+    }
+
+    .navSubMenuTitle {
+        height: 40px;
+        box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.2) inset;
+    }
+
+    .navSubMenuContent {
+        position: relative;
+        background-color: #c0c0c0;
+        transition: max-height 0.2s;
+        display: block;
+        text-align: center;
+        box-shadow: none;
+    }
+
+    .navSubMenuContent a{
+        box-shadow: 0px -1px 0px 0px rgba(0,0,0,0.2) inset;
+    }
+
+    nav:hover .navSubMenu, nav:active .navSubMenu {
+        max-height: 500px;
+        overflow: visible;
+    }
+    
+    .navSubMenu:hover .navSubMenuContent {
+        display: block;
+        transform: translateY(0);
+    }
+}
