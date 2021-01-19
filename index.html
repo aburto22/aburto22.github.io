@@ -5,42 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les Petits Velos</title>
     <link rel='stylesheet' href='style.css'>
+    <link rel="shortcut icon" type="image/jpg" href="/icons/bike.jpg"/>
 </head>
 <body>
-    <header>
+    <header id='header'>
         <h1>Les Petits Velos</h1>
         <h2>A bike journey by Ludi and Ale</h2>
     </header>
     <nav>
-        <ul>
-            <li class='home'><a>Home and Open Menu</a></li>
-            <li class='container'><a class='navTitle'>About Us</a> <ul class='content'>
-                <li><a>Ludi</a></li>
-                <li><a>Ale</a></li>
-            </ul></li>
-            <li class='container'><a class='navTitle'>Canada 2020-2021</a> <ul class='content'>
-                <li><a>La Cote Nord</a></li>
-                <li><a>Gaspesie</a></li>
-                <li><a>Sagueney et Lac St. Jean</a></li>
-                <li><a>Charlevoix</a></li>
-                <li><a>Cantons de l'Est</a></li>
-                <li><a>La Derniere Ligne Droite</a></li>
-            </ul></li>
-            <li class='container'><a class='navTitle'>Australia 2017-2019</a> <ul class='content'>
-                <li><a>Mawson Trail</a></li>
-                <li><a>Great Ocean Road</a></li>
-                <li><a>Small Trips</a></li>
-            </ul></li>
-            <li><a>Solo Trips</a></li>
-            <li><a>Preparation</a></li>
-            <li><a>Gallery</a></li>
-            <li><a>Contact Us</a></li>
+        <ul class='menu'>
+            <li class='home'><a href='#'>
+                <div class='homeFlex'>
+                    <img src='icons/bike.jpg'>
+                    <img src='icons/bikeBlack.jpg' class='overlay'>
+                    <p>Home</p>
+                </div>
+            </a></li>
+            <li class='toggle'><a tabindex='0'><img src='/icons/menuHamburger.svg'><img src='/icons/menuClose.png'></a></li>
+            <li class='item hasSubMenu'><a tabindex='0'>About Us <span class='contentArrow'>&#9662;</span></a>
+                <ul class='subMenu'>
+                    <li class='subItem'><a href='#'>Ludi</a></li>
+                    <li class='subItem'><a href='#'>Ale</a></li>
+                </ul>
+            </li>
+            <li class='item hasSubMenu'><a tabindex='0'>Canada 2020-2021 <span class='contentArrow'>&#9662;</span></a>
+                <ul class='subMenu'>
+                    <li class='subItem'><a href='#'>La Cote Nord</a></li>
+                    <li class='subItem'><a href='#'>Gaspesie</a></li>
+                    <li class='subItem'><a href='#'>Sagueney et Lac St. Jean</a></li>
+                    <li class='subItem'><a href='#'>Charlevoix</a></li>
+                    <li class='subItem'><a href='#'>Cantons de l'Est</a></li>
+                    <li class='subItem'><a href='#'>La Derniere Ligne Droite</a></li>
+                </ul>
+            </li>
+            <li class='item hasSubMenu'><a tabindex='0'>Australia 2017-2019 <span class='contentArrow'>&#9662;</span></a> 
+                <ul class='subMenu'>
+                    <li class='subItem'><a href='#'>Mawson Trail</a></li>
+                    <li class='subItem'><a href='#'>Great Ocean Road</a></li>
+                    <li class='subItem'><a href='#'>Small Trips</a></li>
+                </ul>
+            </li>
+            <li class='item'><a href='#'>Solo Trips</a></li>
+            <li class='item'><a href='#'>Preparation</a></li>
+            <li class='item contact'><a href='#'>Contact Us</a></li>
+            <li class='item gallery'><a href='#'>Gallery</a></li>
         </ul>
     </nav>
-    <aside>3</aside>
-    <section>4</section>
-    <div id='right'>5</div>
-    <footer>6</footer>
+    <aside></aside>
+    <section>
+        <p>Welcome to our <em>Les Petits Velos</em> blog!</p>
+        <p>Hope you'll enjoy the blog and get some inspiration to start your own journey.
+        We are a young vegetarian couple willing to enjoy our planet as much as possible but limiting our impact on it! We are a franco-chilean couple and we love our home countries. However, we wish to discover others before they change. Earth is so beautiful, every corner is a piece of art. We would like to discover and share what we see with you by words and photos on the blog and also with the people we will meet on our way.</p>
+        <p>Bon voyage!</p>
+        <p>Alejandro and Ludivine</p>
+        <div class='imgContainer'><img src="img/index/mowsonTrailBIkes.jpg" alt="MowsonTrailBikes" class="imgCenter"></div>
+    </section>
+    <div id='right'></div>
+    <footer>
+        <p>&copy; <strong>Les Petits Velos</strong>. All rights reserved.</p>
+        <p><a href="#header">Back to top</a></p>
+        <p>Produced by <strong>Ludi</strong> & <strong>Ale</strong></p>
+    </footer>
     <script src='script.js'></script>
 </body>
 </html>

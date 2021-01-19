@@ -1,51 +1,82 @@
 'use strict';
 
 function nav() {
-    let nav = {};
-    nav.home = document.querySelector('.home');
-    nav.isShown = true;
-    nav.showNav = function() {
-        let nextChild = nav.home.nextElementSibling;
-        if (nav.isShown) {
-            while (nextChild) {
-                nextChild.style.display = 'none';
-                nextChild = nextChild.nextElementSibling;
+    let menu = document.querySelector('.menu');
+    let toggle = document.querySelector('.toggle');
+    toggle.img = toggle.querySelectorAll('img');
+    let items = document.querySelectorAll('.item');
+    let subMenusHead = document.querySelectorAll('.hasSubMenu');
+    let subMenus = document.querySelectorAll('.subMenu');
+
+    function closeAllSubMenus() {        
+        subMenus.forEach((item) => {
+            if (item.classList.contains('active')) item.classList.remove('active');
+        });
+        subMenusHead.forEach((item) => {
+            if (item.classList.contains('subMenuSelected')) {
+                item.classList.remove('subMenuSelected');
+                item.querySelector('.contentArrow').innerHTML = '&#9662';
             }
-            nav.isShown = false;
+        });
+    }
+
+    function closeMenu() {
+        if (toggle.classList.contains('toggleActive')) {
+            toggle.classList.remove('toggleActive')
+            items.forEach((item) => item.classList.remove('active'));
+            toggle.img[0].style.display = 'inline-block';
+            toggle.img[1].style.display = 'none';
+        }
+        closeAllSubMenus();
+    }
+
+    function showMenu() {
+        if (toggle.classList.contains('toggleActive')) {
+            toggle.classList.remove('toggleActive')
+            items.forEach((item) => item.classList.remove('active'));
+            toggle.img[0].style.display = 'inline-block';
+            toggle.img[1].style.display = 'none';
         } else {
-            while (nextChild) {
-                nextChild.style.display = 'block';
-                nextChild = nextChild.nextElementSibling;
-            }
-            nav.isShown = true;
+            toggle.classList.add('toggleActive');
+            items.forEach((item) => item.classList.add('active'));
+            toggle.img[0].style.display = 'none';
+            toggle.img[1].style.display = 'inline-block';
+        }
+        closeAllSubMenus();
+    }
+
+    function showSubMenu(item) {
+        if (item.querySelector('.subMenu').classList.contains('active')) {
+            item.querySelector('.subMenu').classList.remove('active');
+            item.classList.remove('subMenuSelected');
+            item.querySelector('.contentArrow').innerHTML = '&#9662';
+        } else {
+            closeAllSubMenus();
+            item.querySelector('.subMenu').classList.add('active');
+            item.classList.add('subMenuSelected');
+            item.querySelector('.contentArrow').innerHTML = '&#9652';
         }
     }
 
-    nav.showNav();
+    subMenusHead.forEach((item) => {
+        item.addEventListener('click', () => showSubMenu(item));
+        item.addEventListener('keydown', (e) => {
+            if (e.key !== 'Escape' && e.key !== 'Tab') showSubMenu(item);
+        });
+    });
 
-    nav.home.addEventListener('click', nav.showNav);
+    toggle.addEventListener('click', showMenu);
+    toggle.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape' && e.key !== 'Tab') showMenu();
+    });
 
-    let containers = document.querySelectorAll('.container');
-    let navItems = [];
+    document.addEventListener('click', (e) => {
+        if (!menu.contains(e.target)) closeMenu();
+    });
 
-    for (let i = 0; i < containers.length; i++) {
-        let obj = {};
-        obj.container = containers[i];
-        obj.navTitle = containers[i].firstElementChild;
-        obj.content = obj.navTitle.nextElementSibling;
-        obj.isContentShown = false;
-        obj.showChild = function() {
-            if (obj.isContentShown) {
-                obj.content.style.display = 'none';
-                obj.isContentShown = false;
-            } else {
-                obj.content.style.display = 'block';
-                obj.isContentShown = true;
-            }
-        }
-        obj.navTitle.addEventListener('click', obj.showChild);
-        navItems.push(obj);
-    }
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeMenu();
+    })
 }
 
 nav();
