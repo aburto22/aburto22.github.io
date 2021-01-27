@@ -80,8 +80,8 @@ function nav() {
     item.addEventListener('keydown', (e) => {
       if (e.key !== 'Escape' && e.key !== 'Tab') showSubMenu(item);
     });
-    item.addEventListener('mouseover', showSubMenuHover);
-    item.addEventListener('mouseout', hideSubMenuHover);
+    if (window.innerWidth > 1100) item.addEventListener('mouseover', showSubMenuHover);
+    if (window.innerWidth > 1100) item.addEventListener('mouseout', hideSubMenuHover);
   });
 
   toggle.addEventListener('click', showMenu);
