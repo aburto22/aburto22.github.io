@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Petits Velos</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel="shortcut icon" type="image/jpg" href="/icons/bike.jpg" />
+</head>
+
+<body>
+  <div id='forFullScreen' class='fullScreenDisp'>
+    <div id='fullScreenImg'></div>
+    <div id='fullScreenLeft' class='fullScreenArrow'>&#8249;</div>
+    <div id='fullScreenRight' class='fullScreenArrow'>&#8250;</div>
+    <div id='fullScreenClose'><img src='/icons/menuClose.png'></div>
+  </div>
+  <header id='header'>
+    <h1>Les Petits Velos</h1>
+    <h2>A bike journey by Ludi and Ale</h2>
+  </header>
+  <nav>
+    <ul class='menu'>
+      <li class='home'><a href='index.html'>
+          <div class='homeFlex'>
+            <img src='icons/bike.jpg'>
+            <img src='icons/bikeBlack.jpg' class='overlay'>
+            <p>Home</p>
+          </div>
+        </a></li>
+      <li class='toggle'><a tabindex='0'><img src='/icons/menuHamburger.svg'><img src='/icons/menuClose.png'></a></li>
+      </li>
+      <li class='item hasSubMenu'><a tabindex='0'>Trips <span class='contentArrow'>&#9662;</span></a>
+        <ul class='subMenu'>
+          <li class='subItem'><a href='#'>Canada 2020-2021</a></li>
+          <li class='subItem'><a href='#'>Australia 2017-2019</a></li>
+          <li class='subItem'><a href='#'>Solo Trips</a></li>
+        </ul>
+      </li>
+      <li class='item'><a href='#'>Blog</a></li>
+      <li class='item hasSubMenu'><a tabindex='0'>About Us <span class='contentArrow'>&#9662;</span></a>
+        <ul class='subMenu'>
+          <li class='subItem'><a href='ludi.html'>Ludi</a></li>
+          <li class='subItem'><a href='ale.html'>Ale</a></li>
+        </ul>
+      </li>
+      <li class='item contact'><a href='#'>Contact Us</a></li>
+      <li class='item gallery'><a href='gallery.html'>Gallery</a></li>
+    </ul>
+  </nav>
+  <aside></aside>
+  <section>
+    <article>
+      <h2>Ale</h2>
+      <div class='polaroidRight'><img src='img/ale/ale1.jpg'>
+        <p>In the Ruta de los 7 Lagos with Nico</p>
+      </div>
+      <p>I was born in 1991 in Santiago de Chile. I was crazy about push-biking already very young and was riding
+        everywhere in Santiago’s streets. When I came to live in France, his interest for bike touring got stronger. I
+        would then ride the Loire valley, then when back in Chile, the road of the Seven Lakes, and the Austral road in
+        Patagonia.</p>
+      <p>After working in Project Management in Australia for about 2 years, I moved to Canada with Ludi to plan for our
+        first big bike trip!</p>
+      <div class='imgContainer'>
+        <div class='img3'>
+          <div class='fullScreen'><img src='img/ale/ale2.jpg'></div>
+          <div class='fullScreen'><img src='img/ale/ale3.jpg'></div>
+          <div class='fullScreen'><img src='img/ale/ale4.jpg'></div>
+        </div>
+        <div class='img1 fullScreen'><img src='img/ale/ale5.jpg'></div>
+      </div>
+    </article>
+  </section>
+  <footer>
+    <p>&copy; <strong>Les Petits Velos</strong>. All rights reserved.</p>
+    <p><a href="#">Back to top</a></p>
+    <p>Produced by <strong>Ludi</strong> & <strong>Ale</strong></p>
+  </footer>
+  <script src='script.js'></script>
+</body>
+
+</html>

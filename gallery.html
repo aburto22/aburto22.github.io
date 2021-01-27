@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Les Petits Velos</title>
+  <link rel='stylesheet' href='style.css'>
+  <link rel="shortcut icon" type="image/jpg" href="/icons/bike.jpg" />
+</head>
+
+<body>
+  <div id='forFullScreen' class='fullScreenDisp'>
+    <div id='fullScreenImg'></div>
+    <div id='fullScreenLeft' class='fullScreenArrow'>&#8249;</div>
+    <div id='fullScreenRight' class='fullScreenArrow'>&#8250;</div>
+    <div id='fullScreenClose'><img src='/icons/menuClose.png'></div>
+  </div>
+  <header id='header'>
+    <h1>Les Petits Velos</h1>
+    <h2>A bike journey by Ludi and Ale</h2>
+  </header>
+  <nav>
+    <ul class='menu'>
+      <li class='home'><a href='index.html'>
+          <div class='homeFlex'>
+            <img src='icons/bike.jpg'>
+            <img src='icons/bikeBlack.jpg' class='overlay'>
+            <p>Home</p>
+          </div>
+        </a></li>
+      <li class='toggle'><a tabindex='0'><img src='/icons/menuHamburger.svg'><img src='/icons/menuClose.png'></a></li>
+      </li>
+      <li class='item hasSubMenu'><a tabindex='0'>Trips <span class='contentArrow'>&#9662;</span></a>
+        <ul class='subMenu'>
+          <li class='subItem'><a href='#'>Canada 2020-2021</a></li>
+          <li class='subItem'><a href='#'>Australia 2017-2019</a></li>
+          <li class='subItem'><a href='#'>Solo Trips</a></li>
+        </ul>
+      </li>
+      <li class='item'><a href='#'>Blog</a></li>
+      <li class='item hasSubMenu'><a tabindex='0'>About Us <span class='contentArrow'>&#9662;</span></a>
+        <ul class='subMenu'>
+          <li class='subItem'><a href='ludi.html'>Ludi</a></li>
+          <li class='subItem'><a href='ale.html'>Ale</a></li>
+        </ul>
+      </li>
+      <li class='item contact'><a href='#'>Contact Us</a></li>
+      <li class='item gallery'><a href='gallery.html'>Gallery</a></li>
+    </ul>
+  </nav>
+  <aside></aside>
+  <section id='gallery'>
+    <div class='imgContainer galleryContainer'>
+      <div class='fullScreen'><img src='img/gallery/gallery1.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery2.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery3.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery4.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery5.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery6.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery7.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery8.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery9.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery10.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery11.jpg'></div>
+      <div class='fullScreen'><img src='img/gallery/gallery12.jpg'></div>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; <strong>Les Petits Velos</strong>. All rights reserved.</p>
+    <p><a href="#">Back to top</a></p>
+    <p>Produced by <strong>Ludi</strong> & <strong>Ale</strong></p>
+  </footer>
+  <script src='script.js'></script>
+</body>
+
+</html>
