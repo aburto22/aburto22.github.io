@@ -46,6 +46,10 @@ body {
   clear: both;
 }
 
+a:focus {
+  outline: 1px solid white;
+}
+
 /* Header style mobile */
 
 header {
@@ -99,6 +103,10 @@ nav .home {
 nav .home a {
   padding: 0 2rem;
   height: 100%;
+}
+
+nav .home a:focus {
+  outline-color: black;
 }
 
 nav .home div {

@@ -98,7 +98,6 @@ function nav() {
   })
 }
 
-
 let fullScreen = {
   disp: document.querySelector('#forFullScreen'),
   right: document.querySelector('#fullScreenRight'),
