@@ -41,7 +41,7 @@ body {
 }
 
 .clearfix::after {
-  content: '';
+  content: ' ';
   display: table;
   clear: both;
 }
@@ -214,11 +214,12 @@ section .img1 {
   padding: min(3%, 1rem);
   display: flex;
   align-items: center;
-  margin: 1rem 0;
+  justify-content: center;
+  margin: 1rem auto;
 }
 
 section img {
-  width: 100%;
+  max-width: 100%;
 }
 
 section .img3 {
@@ -251,7 +252,7 @@ section .polaroidRight {
   width: 300px;
   background-color: white;
   padding: 0.7rem;
-  margin: 1rem auto 2rem auto;
+  margin: 2rem auto 2rem auto;
   box-shadow: 0 4px 10px 2px var(--shadowGray);
 }
 
@@ -259,7 +260,8 @@ section .polaroidLeft {
   width: 300px;
   background-color: white;
   padding: 0.7rem;
-  margin: 1rem auto 1rem auto;
+  margin: 2rem auto 2rem auto;
+  box-shadow: 0 4px 10px 2px var(--shadowGray);
 }
 
 section .polaroidRight p, section .polaroidLeft p {
@@ -268,8 +270,21 @@ section .polaroidRight p, section .polaroidLeft p {
   margin: 0.5rem;
 }
 
+article h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+article h1.noMargin {
+  margin-bottom: 0;
+}
+
 article h2 {
   text-align: center;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: normal;
   margin-bottom: 2rem;
 }
 
@@ -487,6 +502,10 @@ footer a {
   }
 
   /* Section style tablet */
+
+  section {
+    font-size: 1.15rem;
+  }
 
   section .polaroidRight {
     float: right;
