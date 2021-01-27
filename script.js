@@ -134,6 +134,14 @@ let fullScreen = {
       fullScreen.removeImg();
       if (fullScreen.disp.classList.contains('fullScreenActive')) fullScreen.disp.classList.remove('fullScreenActive');
     });
+    document.addEventListener('keydown', (e) => {
+      if (fullScreen.disp.classList.contains('fullScreenActive')) {
+        if (e.key === 'Escape') {
+          fullScreen.removeImg();
+          fullScreen.disp.classList.remove('fullScreenActive');
+        }
+      }
+    });
     fullScreen.right.addEventListener('click', fullScreen.goRight);
     fullScreen.left.addEventListener('click', fullScreen.goLeft);
   },
