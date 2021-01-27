@@ -1,5 +1,23 @@
 'use strict';
 
+function general() {
+  document.addEventListener('keydown', function (e) {
+    if (e.key == ' ' && e.target == document.body) {
+      e.preventDefault();
+    }
+  });
+
+  if (window.innerWidth > 1100) {
+    if (document.querySelector('a.noOutline')) {
+      let a = Array.from(document.querySelectorAll('a.noOutline'));
+      a.forEach((link) => {
+        link.classList.remove('noOutline');
+        link.classList.add('outline');
+      })
+    }
+  }
+}
+
 function nav() {
   let nav = document.querySelector('nav');
   let menu = nav.querySelector('.menu');
@@ -88,6 +106,10 @@ function nav() {
   toggle.addEventListener('keydown', (e) => {
     if (e.key !== 'Escape' && e.key !== 'Tab') showMenu();
   });
+
+  nav.addEventListener('keydown', (e) => {
+    if (e.key === ' ') e.preventDefault();
+  })
 
   document.addEventListener('click', (e) => {
     if (!menu.contains(e.target)) closeMenu();
@@ -180,3 +202,5 @@ function section() {
 nav();
 
 section();
+
+general();

@@ -46,7 +46,11 @@ body {
   clear: both;
 }
 
-a:focus {
+a.noOutline:focus {
+  outline: none;
+}
+
+a.outline:focus {
   outline: 1px solid white;
 }
 
@@ -105,7 +109,7 @@ nav .home a {
   height: 100%;
 }
 
-nav .home a:focus {
+nav .home a.outline:focus {
   outline-color: black;
 }
 
