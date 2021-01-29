@@ -222,6 +222,20 @@ section img {
   max-width: 100%;
 }
 
+section .limitHeight {
+  text-align: center;
+}
+
+section .limitHeight > div{
+  display: inline-block;
+}
+
+section .limitHeight img{
+  max-height: 100vh;
+  line-height: 100%;
+  vertical-align: middle;
+}
+
 section .img3 {
   min-width: 100%;
   display: flex;
