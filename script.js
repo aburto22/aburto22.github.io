@@ -174,12 +174,23 @@ let fullScreen = {
     while (!imgContainer.classList.contains('imgContainer')) {
       imgContainer = imgContainer.parentNode;
       counter++;
-      if (counter == 5) break;
+      if (counter == 5) {
+        console.log(`imgContainer for image not found.`);
+        break;
+      }
     }
 
     fullScreen.imgList = Array.from(imgContainer.querySelectorAll('img'));
 
     fullScreen.index = fullScreen.imgList.indexOf(img);
+
+    if (this.imgList.length > 1) {
+      this.right.style.display = 'flex';
+      this.left.style.display = 'flex';
+    } else {
+      this.right.style.display = 'none';
+      this.left.style.display = 'none';
+    }
 
     fullScreen.showImg();
   }
@@ -188,6 +199,7 @@ let fullScreen = {
 function section() {
   let section = document.querySelector('section');
   let imgFullScreen = section.querySelectorAll('.fullScreen');
+  console.log(imgFullScreen);
   if (imgFullScreen.length) imgFullScreen.forEach((img) => img.addEventListener('click', () => {
     fullScreen.showFullScreen(img.firstElementChild);
   }));
