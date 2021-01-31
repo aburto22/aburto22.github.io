@@ -215,7 +215,7 @@ section .img1 {
 
 section .img1 .border {
   background-color: white;
-  padding: min(2%, 1rem);
+  padding: min(3vw, 1rem);
   display: inline-block;
   height: 100%;
 }
@@ -253,7 +253,7 @@ section .img3 > div {
 
 section .img3 .border {
   background-color: white;
-  padding: min(3%, 1rem);
+  padding: min(3vw, 1rem);
   display: inline-block;
   height: 100%;
 }
@@ -332,7 +332,7 @@ section .fullScreen {
 
 #gallery .galleryContainer div {
   background-color: white;
-  padding: min(3%, 1rem);
+  padding: min(3vw, 1rem);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,7 +395,7 @@ section .fullScreen {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: min(2%, 1rem);
+  padding: min(2vw, 1rem);
 }
 
 #forFullScreen #fullScreenImg img {
@@ -540,13 +540,8 @@ footer a {
     width: calc(50% - 2rem);
   }
 
-  section .img3 > .border {
-    padding: min(1.5%, 1rem);
-  }
-  
-  section .limitHeight .border {
-    text-align: center;
-    padding: min(3%, 1rem);
+  section .img3 .border {
+    padding: min(1.5vw, 0.7rem);
   }
 
   /* Gallery style tablet */
@@ -558,7 +553,7 @@ footer a {
 
   #gallery .galleryContainer div {
     width: auto;
-    padding: min(1.5%, 1rem);
+    padding: min(1.5vw, 1rem);
   }
 
   #gallery img {
@@ -609,15 +604,15 @@ footer a {
     margin-bottom: 0;
   }
 
-  section .img3 > .border {
-    padding: min(1%, 1rem);
+  section .img3 .border {
+    padding: min(1vw, 0.7rem);
     height: 100%;
   }
 
   /* Gallery style laptop */
 
   #gallery .galleryContainer div {
-    padding: min(1%, 1rem);    
+    padding: min(1vw, 1rem);    
   }
 
   #gallery img {
